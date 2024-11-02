@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: '22'
 
@@ -23,7 +23,7 @@ jobs:
       run: npm install
       
     - name: Build the Angular app
-      run: npm run build -- --prod --base-href=/lloyd-honey/
+      run: npm run build -- --production --base-href=/lloyd-honey/
 
     - name: Deploy to GitHub Pages
       run: npx angular-cli-ghpages --dir=dist/lloyd-honey
