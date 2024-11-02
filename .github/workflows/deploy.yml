@@ -23,7 +23,7 @@ jobs:
       run: npm install
       
     - name: Build the Angular app
-      run: npm run build -- --omit=dev --base-href=/lloyd-honey/
+      run: npm run build
 
     - name: Deploy to GitHub Pages
       run: npx angular-cli-ghpages --dir=dist/lloyd-honey
