@@ -16,7 +16,9 @@ import { IconListComponent } from './mobile-icon-list';
         <div>Recipes</div>
         <div>About us</div>
       </div>
-      <div class="self-end pl-2 md:mx-auto md:self-center">
+      <div
+        class="self-end pl-2 pb-1.5 md:mx-auto md:self-center md:pl-0 md:pb-0"
+      >
         <lloyd-honey-logo />
       </div>
       <div class="hidden flex-grow justify-center md:flex">
