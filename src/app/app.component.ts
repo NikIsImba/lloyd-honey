@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TopBarComponent } from './top-bar/top-bar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, TopBarComponent],
   template: ` <div>
-    <div class="m-6 bg-slate-800">
-      <div class="p-4 text-xl text-green-100">Hello {{ title }}</div>
-    </div>
-    <router-outlet> </router-outlet>
+    <top-bar />
+    <div class="bg-brand-gray h-96 w-full">placeholder</div>
+    <router-outlet></router-outlet>
   </div>`
 })
 export class AppComponent {
