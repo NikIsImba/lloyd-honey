@@ -5,6 +5,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 export default [
   {
     files: ['**/*.ts', '**/*.js', '**/*.jsx'],
+    ignores: ['node_modules/**/*', 'dist/**/*', 'build/**/*', '.angular/**/*'],
     languageOptions: {
       parser: typescriptEslintParser,
       ecmaVersion: 2020,
@@ -15,7 +16,9 @@ export default [
       prettier: prettierPlugin
     },
     rules: {
+      'prettier/prettier': 'error',
       'prefer-const': 'error',
+      'no-console': 'warn',
       ...typescriptEslintPlugin.configs.recommended.rules,
       ...prettierPlugin.configs.recommended.rules
     }
