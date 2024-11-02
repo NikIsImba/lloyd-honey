@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  build:production:
+    cmds:
+      - ng build --base-href /lloyd-honey/ --configuration production
+    desc: Build the production version of the app
+
+  github:deploy:
+    deps:
+      - build:production
+    cmds:
+      - npx angular-cli-ghpages --dir=dist/lloyd-honey/browser
+    desc: Deploy the app to GitHub Pages
