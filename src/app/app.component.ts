@@ -8,7 +8,6 @@ import { TopBarComponent } from './top-bar/top-bar';
   imports: [RouterOutlet, TopBarComponent],
   template: ` <div>
     <top-bar />
-    <div class="bg-brand-gray h-96 w-full">placeholder</div>
     <router-outlet></router-outlet>
   </div>`
 })
